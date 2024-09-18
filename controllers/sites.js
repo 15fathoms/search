@@ -232,42 +232,29 @@ exports.deleteSite = async (req, res) => {
 }
 
 exports.updateSite = async (req, res) => {
-    try {
+    let id = req.params.id;
+    try{
         const filePath = path.join(__dirname, '../sites.json');
-
-        // Vérifier si le fichier existe, sinon le créer
         if (!fs.existsSync(filePath)) {
-            // s'il n'existe pas, on return une 404
             return res.status(404).json({ error: 'Fichier non trouvé' });
         }
-
-        // Lire le contenu du fichier
         const sites = fs.readFileSync(filePath, 'utf8');
-
-        // Parser le contenu en JSON
         const sitesJSON = JSON.parse(sites);
-
-        // Valider le body de la requête
-        const validator = new bodyValidator();
-        const { body, errors } = validator.validate(req.body);
-        if (errors.length > 0) {
-            return res.status(400).json({ errors });
-        }
-
-        // Récupérer le site par son ID
-        const siteIndex = sitesJSON.findIndex(site => site.id === req.params.id);
-
-        // Mettre à jour le site dans la liste
+        const siteIndex = sitesJSON.findIndex(site => site.id === id);
         if (siteIndex !== -1) {
+            const validator = new bodyValidator();
+            const { body, errors } = validator.validate(req.body);
+            if (errors.length > 0) {
+                return res.status(400).json({ errors });
+            }
             sitesJSON[siteIndex] = body;
-            // Écrire la liste mise à jour dans le fichier
             fs.writeFileSync(filePath, JSON.stringify(sitesJSON, null, 2));
             return res.status(200).json(body);
         } else {
             return res.status(404).json({ error: 'Site non trouvé' });
         }
-    } catch (err) {
-        // Gestion des erreurs, si la lecture ou l'écriture échoue
+    }
+    catch (err) {
         res.status(400).json({
             error: err.message || 'Erreur lors de la lecture du fichier'
         });
