@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style/base.css">
+    <link rel="icon" type="image/svg+xml" href="demo/favicon.svg">
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script> <!-- Lenis JS Library -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&amp;family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap"
+        rel="stylesheet">
+    <title>Fathoms Outline Web Font</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-inner">
+                <div class="title">
+                    <h1>Le titre de ton site</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/articles">Les sites</a></li>
+                        <li><a href="/upload">Ajouter un site</a></li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <input type="text" placeholder="Rechercher">
+                </div>
+            </div>
+        </header>
+        <main>
+            <section>
+                <h2>A TOI DE JOUER !</h2>
+                <div class="section-inner grid intro">
+                    <img src="https://steamuserimages-a.akamaihd.net/ugc/859474532972117585/BD34D0CA76787049F5A740C59C0B433CE6552CEE/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+                        alt="">
+                    <div class="text">
+                        <h3>Quelques ressources intéressantes</h3>
+                        <p>Voici quelques ressources pour t'aider à démarrer ton projet :</p>
+                        <ul>
+                            <li>
+                                <span>Fetch : </span>
+                                <a href="https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch"
+                                    target="_blank">MDN Fetch API</a>
+                            </li>
+                            <li>
+                                <span>
+                                    <code
+                                        data-lang="html"><span class="white">&lt;</span>template<span class="white">&gt;</span></code>
+                                    & <code data-lang="js">cloneNode<span class="white">()</span></code> :
+                                    <h3 style="margin-top: 2rem;"><code
+                                            data-lang="html"><span class="white">&lt;</span>template<span class="white">&gt;</span></code>
+                                    </h3>
+                                    <p>
+                                        C'est une balise HTML qui permet de stocker du contenu HTML qui ne sera pas
+                                        affiché.<br> C'est très utile pour stocker des templates de contenu.
+                                        Si tu prévois d'ajouter plusieurs éléments identiques,<br> tu peux les stocker
+                                        dans un template et les cloner avec <code
+                                            data-lang="js">cloneNode<span class="white">()</span></code>.
+                                    </p>
+                                    <p><span>Exemple :</span><br>
+                                        Si tu veux creer une carte pour chaque article, tu peux stocker le contenu de la
+                                        carte dans un template et le cloner pour chaque article.
+                                        Tu définis la strcuture de la carte dans le template et ensuite, grace a <code
+                                            data-lang="js">JavaScript</code> tu cloneras le template pour chaque article
+                                        en y insérant les données.
+                                    </p>
+                                    <p>
+                                        <code data-lang="html" class="codeblock">
+                                            <span class="white">&lt;</span>template<span class="white">&gt;</span><br>
+                                            <span class="white">&nbsp;&nbsp;&lt;</span>article<span class="white">&gt;</span><br>
+                                            <span class="white">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span>h2<span class="white">&gt;</span><span class="white">&lt;/</span>h2<span class="white">&gt;</span><br>
+                                            <span class="white">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span>p<span class="white">&gt;</span><span class="white">&lt;/</span>p<span class="white">&gt;</span><br>
+                                            <span class="white">&nbsp;&nbsp;&lt;/</span>article<span class="white">&gt;</span><br>
+                                            <span class="white">&lt;/</span>template<span class="white">&gt;</span>
+                                        </code>
+                                    </p>
+                                </span>
+                                <span>
+                                    <h3 style="margin-top: 2rem;"><code
+                                            data-lang="js">cloneNode<span class="white">()</span></code></h3>
+                                    <p>
+                                        <code data-lang="js">cloneNode<span class="white">()</span></code> est une
+                                        méthode qui permet de cloner un élément du DOM.<br>
+                                        Elle prend un argument <code data-lang="js">Booléen</code> (true ou false) qui
+                                        indique si on doit cloner les enfants de l'élément ou non.
+
+                                    </p>
+                                    <p>
+                                        <code class="codeblock language-javascript javascript" data-lang="js">
+                                                ;code function createArticle(article){
+                                                    let template = document.querySelector('template');
+                                                    let clone = template.content.cloneNode(true);
+                                                    clone.querySelector('h2').textContent = article.title;
+                                                    clone.querySelector('p').textContent = article.content;
+                                                    return clone;
+                                                };code
+                                        </code>
+                                    </p>
+                                    <p>
+
+                                    </p>
+                                </span>
+                            </li>
+                            <li><a href="https://www.codecademy.com/">Codecademy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="content">
+                <section>
+                    <h2>Les sites</h2>
+
+                </section>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <script src="/scripts/refresh.js"></script>
+    <script>
+        let js = document.querySelector('.javascript');
+        console.log(js);
+        let tokens = [];
+        let domStructure = [];
+        let schema = {
+            types: [
+                // Fonction avec parenthèses ouvertes
+                {
+                    name: 'functionName',
+                    regex: /^\b\w+\([\w\s,]*\)\s*\{$/
+                },
+                // Méthodes chaînées
+                {
+                    name: 'chainedMethods',
+                    regex: /\b\w+(\.\w+\([\w\s,]*\))+/gs
+                },
+                // Mots-clés de fonction
+                {
+                    name: 'function',
+                    regex: /\bfunction\b/g
+                },
+                // Déclaration de variables
+                {
+                    name: 'variable',
+                    regex: /\b(let|const|var)\b/g
+                },
+                // Chaînes de caractères
+                {
+                    name: 'string',
+                    regex: /^['"][^'"]*['"]$|^`[^`]*`$/g
+                },
+                // Nombres (entiers uniquement)
+                {
+                    name: 'number',
+                    regex: /^\d+$/g
+                },
+                // Commentaires
+                {
+                    name: 'comment',
+                    regex: /\/\/.*|\/\*[\s\S]*?\*\//g
+                },
+                // Mots-clés de contrôle de flux
+                {
+                    name: 'keyword',
+                    regex: /\b(if|else|for|while|return|switch|case|break|continue)\b/g
+                },
+                // Opérateurs arithmétiques et d'affectation
+                {
+                    name: 'operator',
+                    regex: /[+\-*/=]/g
+                },
+                // Booléens
+                {
+                    name: 'boolean',
+                    regex: /^(true|false)$/g
+                },
+                // Objets
+                {
+                    name: 'object',
+                    regex: /\{[^{}]*\}/g
+                },
+                // Tableaux
+                {
+                    name: 'array',
+                    regex: /\[[^\[\]]*\]/g
+                },
+                // Null
+                {
+                    name: 'null',
+                    regex: /\bnull\b/g
+                },
+                // Undefined
+                {
+                    name: 'undefined',
+                    regex: /\bundefined\b/g
+                },
+                // Fonctions fléchées
+                {
+                    name: 'arrow',
+                    regex: /=>/g
+                },
+                // Classes
+                {
+                    name: 'class',
+                    regex: /\bclass\b/g
+                },
+                // Propriétés d'objets
+                {
+                    name: 'property',
+                    regex: /\b\w+:/g
+                },
+                // Opérateur "new"
+                {
+                    name: 'new',
+                    regex: /\bnew\b/g
+                },
+                // Import/Export
+                {
+                    name: 'import',
+                    regex: /\bimport\b/g
+                },
+                {
+                    name: 'export',
+                    regex: /\bexport\b/g
+                },
+                // Module, require
+                {
+                    name: 'module',
+                    regex: /\bmodule\b/g
+                },
+                {
+                    name: 'require',
+                    regex: /\brequire\b/g
+                },
+                // Async/Await
+                {
+                    name: 'async',
+                    regex: /\basync\b/g
+                },
+                {
+                    name: 'await',
+                    regex: /\bawait\b/g
+                },
+                // Promesses
+                {
+                    name: 'promise',
+                    regex: /\bPromise\b/g
+                },
+                {
+                    name: 'resolve',
+                    regex: /\bresolve\b/g
+                },
+                {
+                    name: 'reject',
+                    regex: /\breject\b/g
+                },
+                {
+                    name: 'then',
+                    regex: /\bthen\b/g
+                },
+                {
+                    name: 'catch',
+                    regex: /\bcatch\b/g
+                },
+                {
+                    name: 'finally',
+                    regex: /\bfinally\b/g
+                },
+                // Try/Catch/Finally
+                {
+                    name: 'try',
+                    regex: /\btry\b/g
+                },
+                {
+                    name: 'catch',
+                    regex: /\bcatch\b/g
+                },
+                {
+                    name: 'finally',
+                    regex: /\bfinally\b/g
+                },
+                {
+                    name: 'throw',
+                    regex: /\bthrow\b/g
+                },
+                // Gestion des erreurs
+                {
+                    name: 'error',
+                    regex: /\bError\b/g
+                },
+                // Console et journaux
+                {
+                    name: 'console',
+                    regex: /\bconsole\b/g
+                },
+                {
+                    name: 'log',
+                    regex: /\blog\b/g
+                },
+                {
+                    name: 'warn',
+                    regex: /\bwarn\b/g
+                },
+                {
+                    name: 'error',
+                    regex: /\berror\b/g
+                },
+                {
+                    name: 'info',
+                    regex: /\binfo\b/g
+                },
+                {
+                    name: 'debug',
+                    regex: /\bdebug\b/g
+                },
+                {
+                    name: 'dir',
+                    regex: /\bdir\b/g
+                }
+            ]
+        };
+        let text = js.textContent;
+        text = text.replace(/;code/g, '');
+        text = text.split(' ')
+        console.log(text);
+        text.forEach(token => {
+            if (token != '') {
+                if (token.includes('{')) {
+                    token = token.replace('{', ' { ');
+                    token = token.split(' ');
+                    token.forEach(t => {
+                        if (t.length > 0) {
+                            tokens.push(t);
+                        }
+                    });
+                }
+                else if (token.includes('}')) {  // Notez le `else if` ici pour éviter l'ajout d'un array
+                    token = token.replace('}', ' } ');
+                    token = token.split(' ');
+                    token.forEach(t => {
+                        if (t.length > 0) {
+                            tokens.push(t);
+                        }
+                    });
+                }
+                else {
+                    tokens.push(token);
+                }
+            }
+        });
+        console.log('tokens', tokens);
+        // 1st pass
+        previousToken = '';
+        let index = 0;
+        for (let token of tokens) {
+            console.log(index, token);
+            if (!token.includes(' ')) {
+                for (let type of schema.types) {
+                    if (Array.isArray(token)) {
+                        token.forEach(t => {
+                            if (t.match(type.regex)) {
+                                domStructure.push({
+                                    type: type.name,
+                                    value: t
+                                });
+                            }
+                            else {
+                                domStructure.push({
+                                    type: 'openBracket',
+                                    value: t
+                                });
+                            }
+                        });
+                        break;
+                    }
+                    if (Array.isArray(token)) {
+                        console.log('token', token, previousToken);
+                        if (previousToken.match(schema.types.find(type => type.name == 'variable').regex)) {
+                            domStructure.push({
+                                type: 'variableName',
+                                value: token
+                            });
+                        }
+                        break; // Quitter la boucle `for` sur `schema.types` après avoir trouvé un match
+                    } else {
+                        console.log('no match', token, previousToken);
+                    }
+                    if (token.match(type.regex)) {
+                        domStructure.push({
+                            type: type.name,
+                            value: token
+                        });
+                    }
+                }
+                previousToken = token;
+            }
+            index++;
+        }
+        console.log(tokens);
+        tokens = tokens.join('');
+        console.log(domStructure);
+    </script>
+</body>
+
+</html>

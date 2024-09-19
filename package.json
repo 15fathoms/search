@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "concurrently \"nodemon app.js\" \"node watcher.js\""
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,13 @@
   },
   "homepage": "https://github.com/15fathoms/search#readme",
   "dependencies": {
+    "chokidar": "^4.0.0",
+    "concurrently": "^9.0.1",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
+    "glob": "^11.0.0",
     "mongoose": "^8.6.3",
-    "nodemon": "^3.1.5"
+    "nodemon": "^3.1.5",
+    "ws": "^8.18.0"
   }
 }

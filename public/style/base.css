@@ -1,0 +1,252 @@
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    background: #0d1117;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    min-height: 100dvh;
+    padding: 0;
+    padding-inline: 1rem;
+    margin: 0;
+}
+
+p {
+    color: white !important;
+    line-height: 1.5em;
+    font-size: 1rem
+}
+h6, .h6 {
+    color: white;
+    font-size: 1rem;
+}
+h5, .h5 {
+    color: white;
+    font-size: 1.2rem;
+}
+h4{
+    color: white;
+    font-size: 1.5rem;
+}
+h3, .h3 {
+    color: white;
+    font-size: 1.7rem;
+}
+h2, .h2 {
+    color: white;
+    font-size: 1.9rem;
+}
+h1, .h1 {
+    color: white;
+    font-size: 2.1rem;
+}
+
+i {
+    color: white;
+}
+.wrapper{
+    width: 100rem;
+    margin: 0 auto;
+    max-width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    padding-inline-start: 2.5rem;
+}
+
+li{
+    list-style: "- ";
+}
+a{
+    text-decoration: none;
+}
+.wrapper{
+    padding-top: 2rem;
+}
+
+header{
+    border: 1px solid #30363d;
+    padding: .5rem 1rem;
+    background-color: #161b22;
+    border-radius: .3rem;
+}
+header input{
+    padding: .5rem;
+    border: 1px solid #30363d;
+    border-radius: .5rem;
+    background-color: #161b22;
+    color: #fff;
+}
+
+header .header-inner{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+header nav > ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+header input:focus{
+    outline: 1px solid #30363d;
+}
+header li{
+    list-style: none;
+}
+
+main{
+    padding: 2rem 0;
+}
+section{
+    margin-bottom: 2rem;
+    border: 1px solid #30363d;
+    border-radius: .3rem;
+    padding: 1rem;
+
+}
+section h2{
+    font-style: italic;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: .3rem;
+}
+.intro{
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+.intro img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #30363d;
+}
+.intro .text{
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #161b22;
+    border-radius: .3rem;
+    height: 100%;
+    border: 1px solid #30363d;
+}
+.grid{
+    display: grid;
+}
+section h3{
+    margin-bottom: 1rem;
+}
+section p{
+    margin-bottom: .8rem;
+}
+section li{
+    margin-bottom: .5rem;
+}
+span.white{
+    color: white;
+}
+code{
+    background-color: #161b22;
+    padding: .2rem .5rem;
+    border-radius: .3rem;
+    font-family: 'Fira Code', monospace;
+    font-size: .8rem;
+    border: 1px solid #30363d;
+}
+h3 code{
+    font-size: 1.4rem;
+}
+code[data-lang="html"]{
+    color: #f16529;
+}
+code[data-lang="css"], a{
+    color: #3498db;
+}
+code[data-lang="js"]{
+    color: #f0db4f;
+}
+code[data-lang="js"] .string {
+    color: #ffcc99; /* Orange pâle */
+}
+
+code[data-lang="js"] .keyword {
+    color: #81a1c1; /* Bleu clair désaturé */
+}
+
+code[data-lang="js"] .function {
+    color: #88c0d0; /* Bleu-vert doux */
+}
+
+code[data-lang="js"] .variable {
+    color: #8fbcbb; /* Bleu pastel doux */
+}
+
+code[data-lang="js"] .boolean {
+    color: #88c0d0; /* Cyan lumineux */
+}
+
+code[data-lang="js"] .comment {
+    color: #5e81ac; /* Gris bleuté */
+    font-style: italic;
+}
+
+code[data-lang="js"] .number {
+    color: #b48ead; /* Violet pâle */
+}
+
+code[data-lang="js"] .operator {
+    color: #bf616a; /* Rouge rosé */
+}
+
+code[data-lang="js"] .property {
+    color: #ebcb8b; /* Jaune pâle */
+}
+
+code[data-lang="js"] .constant {
+    color: #d08770; /* Orange foncé */
+}
+
+code[data-lang="js"] .array {
+    color: #a3be8c; /* Vert doux */
+}
+
+code[data-lang="js"] .object {
+    color: #b48ead; /* Violet doux */
+}
+
+code[data-lang="js"] .class-name {
+    color: #d08770; /* Orange foncé */
+}
+
+code[data-lang="js"] .attribute {
+    color: #ebcb8b; /* Jaune pâle */
+}
+.codeblock{
+    background-color: #0d1117;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    border: 1px solid #30363d;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+}
+.topo{
+    margin-top: 1rem;
+}
